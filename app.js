@@ -27,7 +27,7 @@ function updateList()
 					"
 				>
 					<span>${val}</span>
-					<i class="far fa-trash-alt delete" onclick="onDelete(${ID})" ></i>
+					<i class="far fa-trash-alt delete" onclick="deleteTodo(${ID})" ></i>
 		</li>
       `;
             
@@ -37,7 +37,7 @@ function updateList()
 }
 
 
-function onDelete(ID){
+function deleteTodo(ID){
     ID=parseInt(ID);
     let element = localStorage.getItem("Todo")
     if(element)
@@ -92,7 +92,7 @@ function listSearch(text){
                         "
                     >
                         <span>${ele.val}</span>
-                        <i class="far fa-trash-alt delete" onclick="onDelete(${ele.ID})" ></i>
+                        <i class="far fa-trash-alt delete" onclick="deleteTodo(${ele.ID})" ></i>
             </li>
           `;
 
